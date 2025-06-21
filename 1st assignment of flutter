@@ -1,0 +1,37 @@
+abstract class Vehicle{
+
+  int? _speed;
+
+  move(); //abstract method
+
+setSpeed(int speed){
+  _speed =speed;
+}
+}
+
+class Car extends Vehicle{
+  @override
+  move() {
+
+    print(('The car is moving at $_speed km/h'));
+  }
+
+  //getter method
+
+int? get speed => _speed;
+
+  //setter method
+
+set setspeed (int value){
+  _speed = value;
+}
+
+
+}
+
+
+main(){
+  Car BMW = Car(); //obj created for car
+  BMW.setspeed = 45; //set the speed
+  BMW.move(); // called the move method
+}
